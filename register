@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran Media Terbuka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Formulir Pendaftaran Media Terbuka</h2>
+    <form action="proses_pendaftaran_media.php" method="POST">
+        
+        <label for="nama_media">Nama Media <span class="required">*</span></label>
+        <input type="text" id="nama_media" name="nama_media" required>
+
+        <label for="nama_perwakilan">Nama Perwakilan <span class="required">*</span></label>
+        <input type="text" id="nama_perwakilan" name="nama_perwakilan" required>
+
+        <label for="jabatan">Jabatan <span class="required">*</span></label>
+        <input type="text" id="jabatan" name="jabatan" required>
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telepon">Nomor Telepon <span class="required">*</span></label>
+        <input type="text" id="telepon" name="telepon" required>
+
+        <label for="alamat">Alamat Kantor</label>
+        <textarea id="alamat" name="alamat"></textarea>
+
+        <label for="kategori_media">Kategori Media <span class="required">*</span></label>
+        <select id="kategori_media" name="kategori_media" required>
+            <option value="">--Pilih Kategori--</option>
+            <option value="Cetak">Cetak</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Online">Online</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="keperluan">Keperluan Media</label>
+        <textarea id="keperluan" name="keperluan" placeholder="Misalnya: Liputan acara, wawancara, dll."></textarea>
+
+        <button type="submit">Daftar</button>
+    </form>
+</div>
+
+</body>
+</html>
